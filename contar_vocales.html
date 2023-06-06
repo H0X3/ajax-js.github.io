@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <script src="./js/jquery.min.js"></script>
+    <!-- <style>article{height: 80%; }</style> -->
+</head>
+
+<div class="message-body">
+    <p class="has-text-justified"> 
+        <strong class="has-text-danger">Contar el numero de vocales de una palabra</strong>
+
+<div class="field pt-4">
+<div class="control">
+<input id="CadenaVocales" class="input is-danger" type="text" placeholder="Digite" size="12" maxlength="12">
+<button class="button is-danger p-4 mt-3" onclick="contarVocales()"><strong>Verificar</strong></button>
+<button class="button is-light p-4 ml-3 mt-3" onclick="limpiar()"><strong>Clear</strong></button>
+<br><br>
+<div id="mensaje4"></div>
+</div>
+
+
+
+<script>
+function limpiar(){
+        document.getElementById("CadenaVocales").value = '';
+        document.getElementById("CadenaVocales").select();
+      }
+
+function contarVocales(){ 
+
+    let cadena = document.getElementById("CadenaVocales").value;
+    let numeroVocales = cadena.match(/[aeiou]/gi).length;
+document.getElementById("mensaje4").innerHTML="El número de vocales son: "+numeroVocales; 
+
+}
+
+</script>
+</body>
+</html>

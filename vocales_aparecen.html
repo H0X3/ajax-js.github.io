@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- <style>article{height: 80%; }</style> -->
+</head>
+<body>
+    <div class="message-body">
+        <p class="has-text-justified"> 
+            <strong class="has-text-warning-dark">Vocales que aparecen en la palabra</strong>
+    
+    <div class="field pt-4">
+    <div class="control">
+    <input id="vocales" class="input is-warning" type="text" placeholder="Digite" size="12" maxlength="12">
+    <button class="button is-warning p-4 mt-3" onclick="vocalesAparecen()">Palindromo</button>
+    <button class="button is-light p-4 ml-3 mt-3">Clear</button>
+    <br><br>
+    <div id="mensaje3"></div>
+    
+    </div>
+
+<script>
+   
+
+
+function vocalesAparecen() {
+   let stringToStrip = document.getElementById ("vocales").value;
+const container= document.getElementById("mensaje3");
+
+   for(var i = 0; i < stringToStrip.length; i++) {
+
+	if (stringToStrip[i].toLowerCase() === "a") {     
+       const h1=document.createElement("p");
+        container.appendChild(h1);
+        const texto1= document.createTextNode('hay una vocal a');
+        h1.appendChild(texto1);
+    }
+
+if (stringToStrip[i].toLowerCase() === "e") {
+    const h2=document.createElement("p");
+    container.appendChild(h2);
+    const texto2= document.createTextNode('hay una vocal e');
+    h2.appendChild(texto2);
+    }
+
+    if (stringToStrip[i].toLowerCase() === "i") {
+        const h3=document.createElement("p");
+        container.appendChild(h3);
+        const texto3= document.createTextNode('hay una vocal i');
+        h3.appendChild(texto3);
+    }
+
+    if (stringToStrip[i].toLowerCase() === "o") {
+        const h4=document.createElement("p");
+        container.appendChild(h4);
+        const texto4= document.createTextNode('hay una vocal o');
+        h4.appendChild(texto4);
+    }
+
+    if (stringToStrip[i].toLowerCase() === "u") {
+        const h5=document.createElement("p");
+        container.appendChild(h5);
+        const texto5= document.createTextNode('hay una vocal u');
+        h5.appendChild(texto5);
+    }
+
+     }  
+     
+
+    }
+
+    function limpiar(){
+        document.getElementById("vocales").value = '';
+        document.getElementById("vocales").select();
+      }
+
+    </script>
+  
+    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="./js/jquery-3.4.1.min.js"></script>
+
+</body>
+</html>
